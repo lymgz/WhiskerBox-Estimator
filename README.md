@@ -41,6 +41,9 @@ WhiskerBox-Estimator：一键读取带须箱线图，自动估算均值与标准
 - ✅ 中英文双语支持
 
 #### 使用方法：
+```bash
+python csv_converter.py --help  看看帮助文件
+```
 
 **步骤1：生成模板**
 ```bash
@@ -110,7 +113,7 @@ Baseline:
 
 #### 使用方法：
 ```bash
-python simple_converter.py
+python simple_converter.py  (学习建议工具)
 ```
 
 ### 3. 统计转换核心 (`statistical_converter.py`)
@@ -213,7 +216,79 @@ SD = sqrt(((Q1-Q2)² + (Q2-Q3)² + 0.25×(b-a)²) / 1.35)
 
 ## 更新日志
 
-### v2.0 (当前版本)
+### v4.0 (当前版本)
+- ✅ **组间比较分析功能**：完整实现两组数据的差异分析
+- ✅ **统计学计算**：ΔMean、SD_diff、置信区间、效应量、P值
+- ✅ **多种比较模式**：干预组vs基线组、组内两两比较、全部比较
+- ✅ **Meta分析格式输出**：RevMan、R Meta包、通用格式
+- ✅ **专业统计指标**：Cohen's d、Hedges' g、t检验、显著性判断
+- ✅ **增强Excel输出**：新增"组间比较结果"工作表
+
+#### v4.0 核心公式实现：
+基于用户需求的完整统计学公式：
+```
+ΔMean = Mean₁ - Mean₂
+SD_diff = √(SD₁²/n₁ + SD₂²/n₂)
+95% CI = ΔMean ± 1.96 × SD_diff
+Cohen's d = ΔMean / 合并标准差
+```
+
+#### v4.0 新增功能：
+
+**1. 组间比较命令**：
+```bash
+# 基本组间比较
+python csv_converter.py --convert data.csv --compare-groups
+
+# 指定比较类型
+python csv_converter.py --convert data.csv --compare-groups --comparison-type intervention-baseline
+
+# 自定义置信水平
+python csv_converter.py --convert data.csv --compare-groups --confidence-level 0.99
+
+# 生成Meta分析格式
+python csv_converter.py --convert data.csv --compare-groups --meta-analysis-format
+```
+
+**2. 比较类型选项**：
+- `intervention-baseline`: 干预组vs基线组比较（默认）
+- `pairwise`: 同组内Case之间两两比较
+- `all`: 包含以上所有比较
+
+**3. Meta分析格式输出**：
+- `meta_universal.csv`: 通用Meta分析格式（包含所有统计指标）
+- `meta_revman.csv`: RevMan (Cochrane) 标准格式
+- `meta_r.csv`: R语言meta包格式
+
+**4. 增强的Excel输出结构**：
+- Sheet1: 转换结果 - 各组Mean±SD
+- **Sheet2: 组间比较结果** - ΔMean、置信区间、效应量、P值（新增）
+- Sheet3: 数据质量分析 - 等级评估和策略
+- Sheet4: 详细分析 - 数据完整度
+- Sheet5: 摘要信息 - 包含比较统计摘要
+- Sheet6: 改进建议 - 数据质量提升建议
+
+**5. 输出示例**：
+```
+组间比较分析结果：
+📊 Intervention vs Baseline (Case1)
+   ΔMean = 12.6222
+   SD_diff = 5.6390
+   95% CI: [1.5697, 23.6746]
+   Cohen's d = 0.5779
+   P值 = 0.0500
+   ✓ 显著差异：组1显著高于组2
+```
+
+### v3.0
+- ✅ **强制文件保存功能**：每次转换后自动保存Excel和CSV文件
+- ✅ **智能文件命名**：自动处理文件占用，使用_01到_99后缀循环
+- ✅ **多格式输出支持**：Excel详细报告（4个工作表）+ CSV摘要文件
+- ✅ **自定义输出选项**：支持自定义目录和文件名
+- ✅ **文件占用处理**：超过99个文件后从_01开始覆盖
+- ✅ **新增命令行参数**：--output-dir、--output-name、--no-csv
+
+### v2.0
 - ✅ 新增CSV批量处理功能
 - ✅ 实现"分图分法"智能处理
 - ✅ 添加最不利情况保守估计
@@ -230,9 +305,3 @@ SD = sqrt(((Q1-Q2)² + (Q2-Q3)² + 0.25×(b-a)²) / 1.35)
 **开发者**：研究代码工具集  
 **更新时间**：2025年8月  
 **许可证**：用于学术研究目的
-
-
-## 许可证
-
-MIT
-
