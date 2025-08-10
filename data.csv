@@ -1,0 +1,19 @@
+Baseline,Left Brachioradialis,Right Brachioradialis,Left Biceps brachii,Right Biceps brachii,Left Triceps brachii,Right Triceps brachii,Left Trapezius middle fibers,Right Trapezius middle fibers,Left Latissimus dorsi,Right Latissimus dorsi,Left Thoracolumbar fascia,Right Thoracolumbar fascia,Left Rectus femoris,Right Rectus femoris,Left Biceps femoris,Right Biceps femoris
+Upper_Outlier,,0.926 ,,,0.371 ,,,,,-0.709 ,,,0.239 ,,,
+Upper_Whisker,0.349 ,0.626 ,0.217 ,0.184 ,0.085 ,0.162 ,0.560 ,0.176 ,-0.041 ,0.137 ,0.519 ,0.113 ,-0.299 ,-0.044 ,0.626 ,0.055 
+Q3,0.236 ,0.225 ,0.151 ,0.019 ,0.005 ,0.025 ,0.157 ,0.085 ,-0.066 ,-0.005 ,0.077 ,-0.110 ,-0.299 ,-0.129 ,0.165 ,-0.085 
+Q2,-0.115 ,0.027 ,0.005 ,-0.008 ,-0.025 ,-0.011 ,-0.052 ,0.008 ,-0.146 ,-0.082 ,-0.115 ,-0.299 ,-0.459 ,-0.288 ,0.036 ,-0.192 
+Q1,-0.475 ,-0.033 ,-0.154 ,-0.214 ,-0.096 ,-0.096 ,-0.332 ,-0.052 ,-0.335 ,-0.206 ,-0.379 ,-0.385 ,-0.503 ,-0.396 ,-0.201 ,-0.327 
+Lower_Whisker,-0.525 ,-0.209 ,-0.228 ,-0.324 ,-0.198 ,-0.190 ,-0.475 ,-0.192 ,-0.382 ,-0.206 ,-0.511 ,-0.497 ,-0.657 ,-0.585 ,-0.437 ,-0.346 
+Lower_Outlier,,-0.497 ,,,,-0.431 ,,-0.330 ,-0.893 ,-0.745 ,,,0.201 ,,,-0.876 
+Sample_Size,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30
+,,,,,,,,,,,,,,,,
+Intervention,Left Brachioradialis,Right Brachioradialis,Left Biceps brachii,Right Biceps brachii,Left Triceps brachii,Right Triceps brachii,Left Trapezius middle fibers,Right Trapezius middle fibers,Left Latissimus dorsi,Right Latissimus dorsi,Left Thoracolumbar fascia,Right Thoracolumbar fascia,Left Rectus femoris,Right Rectus femoris,Left Biceps femoris,Right Biceps femoris
+Upper_Outlier,,0.358,,,0.336,0.416,,,0.405,0.583,,,,,,
+Upper_Whisker,0.298,0.01,0.147,0.114,0.246,0.084,0.553,0.418,0.147,0.067,0.44,0.111,0.44,0.46,0.243,0.257
+Q3,0.158,0.01,0.106,0.021,0.053,0.073,0.15,0.084,0.048,-0.01,0.182,-0.021,0.317,0.267,0.064,0.053
+Q2,0.043,-0.043,0.01,-0.001,-0.034,0.048,-0.018,-0.056,0.018,-0.053,0.048,-0.169,0.062,-0.119,-0.026,0.012
+Q1,-0.043,-0.103,-0.092,-0.226,-0.103,-0.04,-0.226,-0.284,-0.16,-0.259,-0.045,-0.284,-0.045,-0.243,-0.174,-0.073
+Lower_Whisker,-0.24,-0.122,-0.267,-0.344,-0.169,-0.048,-0.608,-0.575,-0.468,-0.454,-0.333,-0.638,-0.295,-0.813,-0.347,-0.128
+Lower_Outlier,,-0.342,,,,0.284,,,,,,-0.715,,,,-0.199
+Sample_Size,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30
