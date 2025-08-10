@@ -304,4 +304,4 @@ python csv_converter.py --convert data.csv --compare-groups --meta-analysis-form
 
 **开发者**：研究代码工具集  
 **更新时间**：2025年8月  
-**许可证**：用于学术研究目的
+**许可证**：MIT
